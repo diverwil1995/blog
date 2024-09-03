@@ -1,0 +1,14 @@
+theme: minima
+title: 程式碼與牠們的產地
+description: 探索程式開發的各個面向，分享技術心得與經驗
+author: diverwil1995
+
+# 分頁設置
+paginate: 5
+paginate_path: "/page:num/"
+
+# 永久鏈接格式
+permalink: /:year/:month/:day/:title/
+
+# 時區設置
+timezone: Asia/Taipei
