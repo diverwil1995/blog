@@ -1,14 +1,24 @@
-theme: minima
-title: 程式碼與牠們的產地
-description: 探索程式開發的各個面向，分享技術心得與經驗
-author: diverwil1995
+title: diverwil1995 的部落格
+description: 這裡除了技術文章，也會記錄一些生活相關的日誌。
+author: Wilson 小鬼
 
-# 分頁設置
+# 使用 minima 主題
+theme: minima
+
+# 自定義 CSS
+custom_css: /assets/css/styles.css
+
+# 分頁設置（如果需要）
+plugins:
+  - jekyll-paginate
 paginate: 5
 paginate_path: "/page:num/"
 
-# 永久鏈接格式
-permalink: /:year/:month/:day/:title/
+# 設置摘要分隔符
+excerpt_separator: <!--more-->
 
-# 時區設置
+# Markdown 處理器
+markdown: kramdown
+
+# 其他設置
 timezone: Asia/Taipei
