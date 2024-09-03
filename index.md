@@ -1,6 +1,6 @@
 ---
 layout: home
-title: 首頁
+title: Home
+pagination:
+  enabled: true
 ---
-
-歡迎來到我的技術博客！這裡記錄了我在程式開發中的學習和思考。

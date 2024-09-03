@@ -27,5 +27,5 @@ markdown: kramdown
 timezone: Asia/Taipei
 
 # GitHub Pages 相關設置
-baseurl: "/blog" # 如果您的倉庫名是 blog
+baseurl: "/blog"
 url: "https://diverwil1995.github.io"
