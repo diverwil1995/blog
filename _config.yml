@@ -8,9 +8,12 @@ theme: minima
 # 自定義 CSS
 custom_css: /assets/css/styles.css
 
-# 分頁設置（如果需要）
 plugins:
   - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+   
+# 分頁設置
 paginate: 5
 paginate_path: "/page:num/"
 
@@ -22,3 +25,7 @@ markdown: kramdown
 
 # 其他設置
 timezone: Asia/Taipei
+
+# GitHub Pages 相關設置
+baseurl: "/blog" # 如果您的倉庫名是 blog
+url: "https://diverwil1995.github.io"
