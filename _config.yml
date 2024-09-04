@@ -2,6 +2,9 @@ title: diverwil1995 的部落格
 description: 這裡除了技術文章，也會分享一些生活點滴。
 author: Wilson 小鬼
 
+# 自定義 CSS
+custom_css: /assets/css/styles.css
+
 # 分頁設置
 paginate: 10
 paginate_path: "/page:num/"
@@ -10,6 +13,12 @@ paginate_path: "/page:num/"
 collections:
   lists:
     output: true
+
+# Markdown 處理器
+markdown: kramdown
+
+# 其他設置
+timezone: Asia/Taipei
 
 # 默認布局設置
 defaults:
@@ -23,3 +32,9 @@ defaults:
       type: "pages"
     values:
       layout: "page"
+      
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-seo-tag
+   
