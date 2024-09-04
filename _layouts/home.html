@@ -1,23 +1,37 @@
 ---
 layout: default
 ---
-<div class="container">
-    <header>
-        <h1>{{ site.title }}</h1>
-        <p>{{ site.description }}</p>
-    </header>
+<div class="home">
+  <header class="site-header">
+    <h1 class="site-title">{{ site.title }}</h1>
+    <p class="site-description">{{ site.description }}</p>
+  </header>
 
-    <div class="posts">
-        {% for post in site.posts %}
-        <article class="post-preview">
-            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-            <div class="post-meta">
-                <!-- <time datetime="{{ post.date | date_to_xmlschema }}">
-                    {{ post.date | date: "%B %-d, %Y" }}
-                </time> -->
-            </div>
-            <!-- <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p> -->
-        </article>
-        {% endfor %}
-    </div>
+  <div class="posts">
+    {% for post in site.posts %}
+      <article class="post-preview">
+        <header>
+          <h2 class="post-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h2>
+          <div class="post-meta">
+            {% if post.author %}
+              <img src="{{ site.baseurl }}/assets/images/{{ post.author | slugify }}.jpg" alt="{{ post.author }}" class="author-avatar">
+              <span class="author-name">{{ post.author }}</span>
+            {% endif %}
+            <time datetime="{{ post.date | date_to_xmlschema }}">
+              {{ post.date | date: "%B %-d, %Y" }}
+            </time>
+            {% if post.last_modified_at %}
+              <span class="last-modified">(Updated: {{ post.last_modified_at | date: "%B %-d, %Y" }})</span>
+            {% endif %}
+          </div>
+        </header>
+        <div class="post-excerpt">
+          {{ post.excerpt | strip_html | truncatewords: 50 }}
+        </div>
+        <a href="{{ post.url | relative_url }}" class="read-more">Read more</a>
+      </article>
+    {% endfor %}
+  </div>
 </div>
