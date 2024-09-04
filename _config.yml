@@ -38,3 +38,5 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
    
+baseurl: "/blog"
+url: "https://diverwil1995.github.io"

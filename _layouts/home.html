@@ -2,6 +2,8 @@
 layout: default
 ---
 <div class="home">
+    <h1>{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
     <h2>最新文章</h2>
     {% for post in paginator.posts %}
     <article class="post-preview">
