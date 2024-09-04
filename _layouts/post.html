@@ -2,31 +2,39 @@
 layout: default
 ---
 <article class="post">
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <div class="post-meta">
-      {% if page.author %}
-        <img src="{{ site.baseurl }}/assets/images/{{ page.author | slugify }}.jpg" alt="{{ page.author }}" class="author-avatar">
-        <span class="author-name">{{ page.author }}</span>
-      {% endif %}
-      <time datetime="{{ page.date | date_to_xmlschema }}">
-        {{ page.date | date: "%B %-d, %Y" }}
-      </time>
-      {% if page.last_modified_at %}
-        <span class="last-modified">(Updated: {{ page.last_modified_at | date: "%B %-d, %Y" }})</span>
-      {% endif %}
-    </div>
-  </header>
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <p class="post-subtitle">{{ page.subtitle }}</p>
+        <div class="post-meta">
+            <time datetime="{{ page.date | date_to_xmlschema }}">
+                {{ page.date | date: "%Y年%m月%d日" }}
+            </time>
+            {% if page.last_modified_at %}
+            (更新於 {{ page.last_modified_at | date: "%Y年%m月%d日" }})
+            {% endif %}
+            {% if page.author %}
+            <span class="post-author">作者: {{ page.author }}</span>
+            {% endif %}
+        </div>
+    </header>
 
-  <div class="post-content">
-    {{ content }}
-  </div>
-  <footer class="post-footer">
-    <div class="share-buttons">
-      <h3>Share this post</h3>
-      <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" target="_blank" rel="noopener noreferrer">Twitter</a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" target="_blank" rel="noopener noreferrer">Facebook</a>
-      <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <div class="post-content">
+        {{ content }}
     </div>
-  </footer>
+
+    {% if page.tags.size > 0 %}
+    <div class="post-tags">
+        標籤:
+        {% for tag in page.tags %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="share-buttons">
+        <h3>分享這篇文章</h3>
+        <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ site.baseurl }}{{ page.url }}" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ site.baseurl }}{{ page.url }}&title={{ page.title }}" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
 </article>
