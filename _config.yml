@@ -1,31 +1,25 @@
 title: diverwil1995 的部落格
-description: 這裡除了技術文章外，也會分享一些生活點滴。
+description: 這裡除了技術文章，也會分享一些生活點滴。
 author: Wilson 小鬼
 
-# 使用 minima 主題
-theme: minima
-
-# 自定義 CSS
-custom_css: /assets/css/styles.css
-
-plugins:
-  - jekyll-paginate
-  - jekyll-feed
-  - jekyll-seo-tag
-   
 # 分頁設置
-paginate: 5
+paginate: 10
 paginate_path: "/page:num/"
 
-# 設置摘要分隔符
-excerpt_separator: <!--more-->
+# 集合設置
+collections:
+  lists:
+    output: true
 
-# Markdown 處理器
-markdown: kramdown
-
-# 其他設置
-timezone: Asia/Taipei
-
-# GitHub Pages 相關設置
-baseurl: "/blog"
-url: "https://diverwil1995.github.io"
+# 默認布局設置
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"

@@ -1,10 +1,10 @@
 <header class="site-header">
-    <div class="wrapper">
-      <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+  <div class="container">
+      <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
       <nav class="site-nav">
-        <a href="{{ "/categories" | relative_url }}">分類</a>
-        <a href="{{ "/tags" | relative_url }}">標籤</a>
-        <a href="{{ "/archive" | relative_url }}">存檔</a>
+          <a href="{{ '/' | relative_url }}">Home</a>
+          <a href="{{ '/lists' | relative_url }}">Lists</a>
+          <a href="{{ '/about' | relative_url }}">About</a>
       </nav>
-    </div>
-  </header>
+  </div>
+</header>
