@@ -4,7 +4,7 @@ title: "程式碼與牠們的產地(2)：Github Repository"
 subtitle: "GitHub 基礎操作概念介紹"
 date: 2024-03-15
 last_modified_at: 2024-09-03
-image: /assets/images/pic.jpg
+image: /assets/images/gitrepo-cover.jpg
 tags: [Git, GitHub]
 ---
 

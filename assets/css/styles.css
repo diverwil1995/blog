@@ -118,15 +118,73 @@ body {
 }
 
 .profile {
-    background-color: #f9f9f9;
+    text-align: center;
     padding: 20px;
+    background-color: #f9f9f9;
     border-radius: 5px;
 }
 
-.profile-image {
+.author-image {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    object-fit: cover;
+    margin: 0 auto 15px;
+    display: block;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-image: url('{{ site.author_image | relative_url }}');
+    background-size: cover;
+    background-position: center;
+}
+
+.author-name {
+    font-size: 1.5em;
     margin-bottom: 10px;
 }
+
+.author-bio {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.6;
+}
+
+.site-header {
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .site-title-group {
+    display: inline-block;
+    text-align: left;
+  }
+  
+  .site-title {
+    margin-bottom: 5px;
+    font-size: 2.5em;
+  }
+  
+  .site-description {
+    margin-top: 0;
+    font-size: 1em;
+    color: #666;
+  }
+  
+  .site-nav {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .nav-tab {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-tab:hover, .nav-tab.active {
+    background-color: #e0e0e0;
+  }
