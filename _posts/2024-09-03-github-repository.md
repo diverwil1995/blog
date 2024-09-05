@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "程式碼與牠們的產地(1)：Git 版本控制"
-subtitle: "Git 版本控制基礎概念介紹"
-date: 2024-09-01
-last_modified_at: 2024-09-05
-image: /assets/images/git-cover.jpg
+title: "程式碼與牠們的產地(2)：Github Repository"
+subtitle: "GitHub 基礎操作概念介紹"
+date: 2024-03-15
+last_modified_at: 2024-09-03
+image: /assets/images/gitrepo-cover.jpg
 tags: [Git, GitHub]
 ---
 
