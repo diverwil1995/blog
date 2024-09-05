@@ -1,18 +1,12 @@
 ---
 layout: post
-title: "程式碼與牠們的產地(2)：Github Repository"
-subtitle: "GitHub 基礎操作概念介紹"
-date: 2024-03-15
-last_modified_at: 2024-09-03
-image: /assets/images/gitrepo-cover.jpg
+title: "程式碼與牠們的產地(1)：Git 版本控制"
+subtitle: "Git 版本控制基礎概念介紹"
+date: 2024-09-01
+last_modified_at: 2024-09-05
+image: /assets/images/git-cover.jpg
 tags: [Git, GitHub]
 ---
-
-<!-- # 程式碼與牠們的產地(2)：Github Repository
-
-*作者：diverwil1995*
-*發布日期：2024年5月8日*
-*最後更新：2024年9月3日* -->
 
 ## 目錄
 1. [前言](#前言)
