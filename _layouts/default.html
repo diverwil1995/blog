@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+    {% feed_meta %}
+    {% seo %}
 </head>
 <body>
     {% include header.html %}
-    <main class="container">
-        {{ content }}
-    </main>
+    <div class="container">
+        <main class="content">
+            {{ content }}
+        </main>
+        <aside class="sidebar">
+            {% include profile.html %}
+        </aside>
+    </div>
     {% include footer.html %}
 </body>
 </html>
